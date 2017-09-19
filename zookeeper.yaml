@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: zookeeper
+  labels:
+    run: zookeeper
+  namespace: default
+  generation: 1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: zookeeper
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: zookeeper
+    spec:
+      containers:
+      - name: zookeeper
+        image: registry:5000/zookeeper:latest
+        ports:
+      hostname: zk
+      restartPolicy: Always
+      schedulerName: default-scheduler

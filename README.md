@@ -1,5 +1,5 @@
 # Build
-Follows up from [sandy-k8s-registry/README.md](https://github.com/Klazomenai/sandy-k8s-registry)
+Follows up from [sandy-puppetserver/README.md](https://github.com/Klazomenai/sandy-puppetserver)
 
  - Use Docker from within Minikube
 ```sh
